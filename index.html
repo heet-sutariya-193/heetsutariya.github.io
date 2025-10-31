@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heet Sutariya | Portfolio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' fill='%2300f3ff'>HS</text></svg>"
+        type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Loading Portfolio...</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">HEET SUTARIYA</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#awards" class="nav-link">Awards</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Heet Sutariya</span></h1>
+                <p>A passionate Computer Science student at VNIT Nagpur, dedicated to creating impactful technology
+                    solutions through innovative problem-solving and clean code.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="resume.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <img src="heet.jpg" alt="Heet Sutariya">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>About Me</h2>
+                <p>Get to know more about my journey and aspirations</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Who Am I?</h3>
+                    <p>I'm Heet Sutariya, currently pursuing my B.Tech in Computer Science and Engineering at
+                        Visvesvaraya National Institute of Technology, Nagpur. I'm passionate about technology and love
+                        diving into new challenges that push me to think creatively and problem-solve.</p>
+                    <p>My journey in computer science is not just about coding; it's about understanding how technology
+                        can make a difference in the world. I'm always eager to learn, grow, and contribute to projects
+                        that have a real impact. Looking forward to connecting with like-minded professionals and
+                        exploring opportunities that allow me to make a meaningful difference!</p>
+
+                    <h3 style="margin-top: 30px;">Technical Skills</h3>
+                    <div class="skills-detailed">
+                        <div class="skill-item">
+                            <span class="skill-name">C/C++</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Data Structures</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Algorithms</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">System Programming</span>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="education-item">
+                        <div class="education-year">
+                            <h3>2024 - 2025</h3>
+                            <p>Creative Secretary</p>
+                        </div>
+                        <div class="education-details">
+                            <h3>CSE 2nd Year Class Council</h3>
+                            <p>Responsible for organizing creative events and activities for the Computer Science
+                                department, fostering collaboration and innovation among students.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Awards</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="1">0</div>
+                            <div class="stat-label">Year Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Education</h2>
+                <p>My academic journey and qualifications</p>
+            </div>
+            <div class="education-content">
+                <div class="education-item fade-in">
+                    <div class="education-year">
+                        <h3>2023 - 2027</h3>
+                        <p>CGPA: 8.47</p>
+                    </div>
+                    <div class="education-details">
+                        <h3>B.Tech in Computer Science & Engineering</h3>
+                        <p>Visvesvaraya National Institute of Technology, Nagpur</p>
+                        <p>Relevant coursework: Object-Oriented Programming, Data Structures and Algorithms, Computer
+                            Organization, Programming Language Concepts</p>
+                    </div>
+                </div>
+                <div class="education-item fade-in">
+                    <div class="education-year">
+                        <h3>2021 - 2023</h3>
+                        <p>Percentage: 78%</p>
+                    </div>
+                    <div class="education-details">
+                        <h3>Class XII (GSEB)</h3>
+                        <p>Sardar Patel Educational Institute, Bhavnagar</p>
+                        <p>Perfect Score in Mathematics: 100/100</p>
+                    </div>
+                </div>
+                <div class="education-item fade-in">
+                    <div class="education-year">
+                        <h3>2021</h3>
+                        <p>Percentage: 93.33%</p>
+                    </div>
+                    <div class="education-details">
+                        <h3>Class X (GSEB)</h3>
+                        <p>Sardar Patel Educational Institute, Bhavnagar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>My Projects</h2>
+                <p>Check out some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-img">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Scalable Parking Management System</h3>
+                        <p class="date">Mar 2025 - Apr 2025</p>
+                        <p>Architected and developed a comprehensive parking management system in C, centered around a
+                            custom-built, generic B+ Tree data structure for scalable data handling.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>B+ Trees</span>
+                            <span>File I/O</span>
+                            <span>Data Structures</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/heet-sutariya-193/Scalable-Parking-Management-System"><i
+                                    class="fab fa-github"></i> Code</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-img">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Custom Linux Command Shell</h3>
+                        <p class="date">Jan 2025 - Feb 2025</p>
+                        <p>Developed a robust command-line interpreter in C, simulating core functionalities of a Unix
+                            shell with concurrent and sequential process execution, I/O redirection, and advanced
+                            command pipelining.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>Unix System Calls</span>
+                            <span>Process Management</span>
+                            <span>Signal Handling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/heet-sutariya-193/Custom-Linux-Command-Shell"><i
+                                    class="fab fa-github"></i> Code</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-img">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Low-Level Memory Allocator</h3>
+                        <p class="date">Feb 2025 - Mar 2025</p>
+                        <p>Engineered a custom dynamic memory manager in C to simulate a core operating system service,
+                            focusing on performance and memory-access safety.</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>Linked Lists</span>
+                            <span>Heap Management</span>
+                            <span>Memory Allocation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/heet-sutariya-193/Low-Level-Memory-Allocator"><i
+                                    class="fab fa-github"></i> Code</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Technical Skills</h2>
+                <p>My technical competencies and expertise areas</p>
+            </div>
+            <div class="skills-categories">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-tags">
+                        <div class="skill-tag">C/C++</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">HTML/CSS</div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-laptop-code"></i> Technologies & Tools</h3>
+                    <div class="skills-tags">
+                        <div class="skill-tag">Git & GitHub</div>
+                        <div class="skill-tag">VS Code</div>
+                        <div class="skill-tag">Linux</div>
+                        <div class="skill-tag">Unix System Calls</div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-brain"></i> Concepts & Methodologies</h3>
+                    <div class="skills-tags">
+                        <div class="skill-tag">Data Structures</div>
+                        <div class="skill-tag">Algorithms</div>
+                        <div class="skill-tag">OOP</div>
+                        <div class="skill-tag">System Programming</div>
+                        <div class="skill-tag">Computer Organization</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Awards & Achievements</h2>
+                <p>Some achievements I'm proud of</p>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card fade-in">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>JEE Mains 2023</h3>
+                    <p>99.39 Percentile (Ranked among top 0.6% of ~1 million candidates)</p>
+                </div>
+                <div class="award-card fade-in">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>GUJCET 2023</h3>
+                    <p>99.5 Percentile (State-Level Engineering Entrance Exam, Top 0.5% of candidates)</p>
+                </div>
+                <div class="award-card fade-in">
+                    <div class="award-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Class 12 Board Exams</h3>
+                    <p>Perfect Score in Mathematics: 100/100 (GSEB)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaborations or just a friendly hello</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>heetsutariya193@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+91 63525 17454</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Nagpur, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/heet-sutariya-193" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://in.linkedin.com/in/heet-sutariya" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        
+                        <a href="https://www.instagram.com/heet.s_193/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="logo">HEET SUTARIYA</a>
+                <p>Thank you for visiting my portfolio. Let's create something amazing together!</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Heet Sutariya. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
