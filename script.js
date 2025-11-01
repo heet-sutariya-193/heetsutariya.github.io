@@ -289,6 +289,7 @@ function createThemeToggle() {
 createThemeToggle();
 
 // Add CSS for animations
+// Add CSS for animations
 const style = document.createElement('style');
 style.textContent = `
     @keyframes float-particle {
@@ -307,14 +308,6 @@ style.textContent = `
         100% {
             transform: translateY(0) translateX(0);
         }
-    }
-    
-    .light-theme {
-        --primary: #f0f0f0;
-        --secondary: #ffffff;
-        --text-primary: #333333;
-        --text-secondary: #666666;
-        --card-bg: rgba(255, 255, 255, 0.9);
     }
     
     .theme-toggle:hover {
