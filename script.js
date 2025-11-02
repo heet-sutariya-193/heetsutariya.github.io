@@ -111,29 +111,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Form submission
+// Initialize EmailJS with your Public Key
+emailjs.init("AB1Zaf_gg0qpVfzUu");
+
+// Form submission with EmailJS
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[name="name"]').value;
-    const email = this.querySelector('input[name="email"]').value;
+    // Show loading state
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
     
-    // Show success message
-    showNotification(`Thank you ${name}! I'll get back to you soon at ${email}`);
-    this.reset();
+    const formData = {
+        from_name: this.querySelector('input[name="name"]').value,
+        from_email: this.querySelector('input[name="email"]').value,
+        subject: this.querySelector('input[name="subject"]').value,
+        message: this.querySelector('textarea[name="message"]').value,
+        to_name: "Heet",
+        reply_to: this.querySelector('input[name="email"]').value
+    };
+    
+    // Send email using EmailJS
+    emailjs.send("service_pioltrq", "template_94vjptk", formData)
+        .then(function(response) {
+            showNotification(`Thank you ${formData.from_name}! I'll reply to you soon.`, 'success');
+            document.getElementById('contactForm').reset();
+        }, function(error) {
+            showNotification('Sorry, there was an error. Please email me directly at heetsutariya193@gmail.com', 'error');
+        })
+        .finally(function() {
+            // Reset button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
 });
 
-// Notification function
-function showNotification(message) {
+// Enhanced notification function
+function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
-    notification.className = 'notification';
+    notification.className = `notification ${type}`;
     notification.textContent = message;
     notification.style.cssText = `
         position: fixed;
         top: 100px;
         right: 20px;
-        background: var(--accent);
+        background: ${type === 'success' ? 'var(--accent)' : '#ff4444'};
         color: var(--primary);
         padding: 15px 20px;
         border-radius: 5px;
@@ -155,7 +179,7 @@ function showNotification(message) {
         setTimeout(() => {
             document.body.removeChild(notification);
         }, 300);
-    }, 3000);
+    }, 4000);
 }
 
 // Add typing effect to hero section
@@ -316,3 +340,4 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
